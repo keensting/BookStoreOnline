@@ -1,0 +1,120 @@
+
+<html>
+<head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Welcome</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery1.10.2.js"></script>
+<script type="text/javascript">
+		
+	$(document).ready(function(){
+
+        $(".login").hide();
+        $(".admin").hide();
+		$("customer").click(function(){
+				
+				$(".login").slideDown(600);
+				$(".admin").slideUp(600);
+				$(".cover").hide();
+				
+		
+		});
+		
+		$("admin").click(function(){
+				$(".login").slideUp(600);
+				$(".admin").slideDown(600);
+				$(".cover").hide();
+		
+		});
+	
+	});
+</script>
+
+</head>
+
+<body>
+<div class="welcome_top">
+	<h1>依香书阁</h1>
+	<h4>为心灵点亮一盏明灯</h4>
+    <div class="userinfo">游客,您好！<br>请登陆！ </div>
+	
+	
+
+</div>
+<customer><center><br /><br />用户</center></customer>
+<admin><center><br /><br />管理员</center></admin>
+
+<div class="welcome_body">
+	<div class="cover">
+	<h3 style="color:red; font-size:30px; font-family:'华文行楷'" align="center"><br />选择登录身份--></h3>
+	</div>
+	<div class="login">
+	<h3 style="color:red; font-size:30px; font-family:'华文行楷'" align="center">我是用户</h3>
+		<form method="post" action="">
+			
+		 	<table border="0" align="center" style="margin-top:100px">
+				<tr height="40px">
+				<td >用户名:</td>
+				<td ><input id="user" name="user"  placeholder="手机号/邮箱/用户名"/></td>
+				
+				</tr>
+				<tr height="40px">
+				<td>密码:</td>
+				<td ><input type="password" id="upw" name="upw"/></td>
+				
+				</tr>
+				
+				
+			</table>
+			
+			<center>
+				<button type="reset" name="reset" >重置</button>
+				<button type="submit" name="submit">登录</button>s
+				</center>
+				
+				
+		</form>
+	</div>
+	<div class="admin">
+		<h3 style="color:red; font-size:30px; font-family:'华文行楷'" align="center">我是管理员</h3>
+		<form method="post" action="adminPage.php">
+			
+		 	<table border="0" align="center" style="margin-top:100px">
+				<tr height="40px">
+				<td >用户名:</td>
+				<td ><input id="admin" name="admin"  placeholder="手机号/邮箱/用户名"/></td>
+				
+				</tr>
+				<tr height="40px">
+				<td>密码:</td>
+				<td ><input type="password" id="apw" name="apw"/></td>
+				
+				</tr>
+				
+				
+			</table>
+			
+			<center>
+				<button type="reset" id="reset" >重置</button>
+				<button type="submit" id="submit">登录</button>
+				</center>
+				
+				
+		</form>
+	</div>
+	<div class="change1">
+		<h1 style="font-family:'华文行楷'; margin:35px">淡薄<br>明志</h1>
+	</div>
+	<div class="change2">
+		<h1 style="font-family:'华文行楷'; margin:35px">宁静<br>致远</h1>
+	</div>
+
+</div>
+</body>
+
+<footer>
+<center>DesignBy:KeenSting</center>
+</footer>
+</html>
